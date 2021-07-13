@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Monkidev | Comunidade</title>
+  </head>
+  <body>
+    <main>
+      <form action="#">
+          <div class="form-item form-name">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="form-name" placeholder="Digite seu nome">
+          </div>
+          <div class="form-item form-email">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="form-email" placeholder="Digite seu nome">
+          </div>
+          <div class="form-item form-interest">
+            <label for="interest">Interesses</label>
+            <textarea name="interest" id="interest" cols="30" rows="5" placeholder="Digite seu interest"></textarea>
+          </div>
+          <div class="form-item form-consider">
+            <label for="consider">Como você se considera</label>
+            <div class="form-radio">
+              <label class="consider-junior"> Iniciante
+                <input type="radio" name="consider" id="junior">
+              </label>
+              <label class="consider-pleno"> Intermediário
+                <input type="radio" name="consider" id="pleno">
+              </label>
+              <label class="consider-senior"> Experiente
+                <input type="radio" name="consider" id="senior">
+              </label>
+            </div>
+          </div>
+          <div class="button-submit">
+            <button type="submit">Enviar</button>
+          </div>
+      </form>
+    </main>
+  </body>
+</html>
