@@ -10,35 +10,51 @@
   <body>
     <main>
       <form action="#">
-          <div class="form-item form-name">
-            <label for="name">Nome</label>
-            <input type="text" name="name" id="form-name" placeholder="Digite seu nome">
+        <div class="form-item form-name">
+          <label for="name">Nome</label>
+          <input
+            type="text"
+            name="name"
+            id="form-name"
+          />
+        </div>
+        <div class="form-item form-email">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="form-email"
+          />
+        </div>
+        <div class="form-item form-interest">
+          <label for="interest">Interesses</label>
+          <textarea
+            name="interest"
+            id="interest"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="form-item form-consider">
+          <label for="consider">Como você se considera</label>
+          <div class="form-radio">
+            <input type="radio" name="consider" id="iniciante" />
+            <label for="iniciante" class="consider-iniciante">
+              Iniciante
+            </label>
+            <input type="radio" name="consider" id="intermediario" />
+            <label for="intermediario" class="consider-intermediario">
+              Intermediário
+            </label>
+            <input type="radio" name="consider" id="experiente" />
+            <label for="experiente" class="consider-experiente">
+              Experiente
+            </label>
           </div>
-          <div class="form-item form-email">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="form-email" placeholder="Digite seu nome">
-          </div>
-          <div class="form-item form-interest">
-            <label for="interest">Interesses</label>
-            <textarea name="interest" id="interest" cols="30" rows="5" placeholder="Digite seu interest"></textarea>
-          </div>
-          <div class="form-item form-consider">
-            <label for="consider">Como você se considera</label>
-            <div class="form-radio">
-              <label class="consider-junior"> Iniciante
-                <input type="radio" name="consider" id="junior">
-              </label>
-              <label class="consider-pleno"> Intermediário
-                <input type="radio" name="consider" id="pleno">
-              </label>
-              <label class="consider-senior"> Experiente
-                <input type="radio" name="consider" id="senior">
-              </label>
-            </div>
-          </div>
-          <div class="button-submit">
-            <button type="submit">Enviar</button>
-          </div>
+        </div>
+        <div class="button-submit">
+          <button type="submit">Enviar</button>
+        </div>
       </form>
     </main>
   </body>

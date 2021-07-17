@@ -1,44 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+
+:root {
+  --color-primary: #007ea7;
+  --color-success: #27ca0d;
+  --color-warning: #f0ad4e;
+  --color-danger: #d9534f;
+  --color-dark: #292b2c;
+  --color-dark-shadow: #292b2cb0;
+  --color-white: #fff;
+  --color-light: #f5f5f5;
+  --color-gray: #828282;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --color-primary: #0275d8; 
-  --color-success: #4BB543; 
-  --color-warning: #f0ad4e; 
-  --color-danger: #d9534f; 
-  --color-dark: #292b2c; 
-  --color-dark-shadow: #292b2cb0; 
-  --color-white: #fff; 
-}
 
 main {
-  width: 100wv;
-  height: 100vh;
+  background-color: var(--color-light);
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: Roboto, sans-serif;
 }
 
 form {
-  width: max-content;
-  height: max-content;
-  padding: 15px 50px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 5px var(--color-dark-shadow);
+  background-color: var(--color-white);
+  padding: 20px 12px;
+  border-radius: 5px;
+}
+
+textarea,
+input:not([type="radio"]) {
+  margin-top: 10px;
+  width: 560px;
+  padding: 15px 10px;
+  border: 1px solid var(--color-gray);
+  border-radius: 10px;
 }
 
 .form-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
+}
 
+.form-consider .form-radio {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 18px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 10px;
 }
 
 .button-submit {
   width: 100%;
 }
-.button-submit button{
+
+.button-submit button {
   float: right;
+}
+
+@media screen and (max-width: 768px) {
+  textarea,
+  input:not([type="radio"]) {
+    width: 100%;
+  }
+
+  .form-consider .form-radio {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  input[type="radio"] + label {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
 }
